@@ -129,5 +129,10 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+# linter
+.cspellcache
+.eslintcache
+.stylelintcache
+
 # extension
 .history
