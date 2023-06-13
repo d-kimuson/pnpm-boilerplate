@@ -1,0 +1,9 @@
+# depenencies
+node_modules
+
+# auto-generated
+**/pnpm-lock.yaml
+**/dist
+
+# personal
+.history
