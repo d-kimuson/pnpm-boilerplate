@@ -28,3 +28,9 @@ $ ./scripts/setup_repository.sh
   - 2023 年 6 月現在で v20 は LTS ではなく CURRENT です
 - その他:
   - .npmrc はプロジェクト構成に併せて調整する
+
+## TODO
+
+- README に options について書く
+- options の追加
+  - aspida

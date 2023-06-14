@@ -1,0 +1,6 @@
+*.mjs
+*.cjs
+*.js
+
+**/dist
+**/generated

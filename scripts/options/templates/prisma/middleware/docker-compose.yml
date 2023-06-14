@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  mysql:
+    build:
+      context: ./mysql
+    restart: always
+    container_name: ${CONTAINER_NAME_MYSQL}
+    ports:
+      - ${MYSQL_PORT}:3306
+    env_file:
+      - .env.middleware
+    volumes:
+      - app-mysql-data:/var/lib/mysql
+
+volumes:
+  app-mysql-data:

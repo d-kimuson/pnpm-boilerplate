@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator fabbrica {
+  provider    = "prisma-fabbrica"
+  output      = "../src/test/fabbrica/generated"
+  tsconfig    = "../tsconfig.test.json"
+  noTranspile = false
+}
+
+generator erd {
+  provider                  = "prisma-erd-generator"
+  theme                     = "forest"
+  includeRelationFromFields = true
+  output                    = "./ERD.md"
+}
+
+model Sample {
+  id            String   @id @default(cuid())
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}

@@ -1,0 +1,18 @@
+{
+  "extends": ["@tsconfig/strictest", "@tsconfig/node18"],
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    // "baseUrl": "./",
+    // "paths": {
+    //   "~/*": ["src/*"]
+    // },
+    "skipLibCheck": true,
+    "noUnusedLocals": false, // eslint
+    "noUnusedParameters": false // eslint
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "test", "**/*.spec.ts", "**/test-utils/**/*"]
+}

@@ -1,7 +1,18 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": ["direnv", "kimuson", "nodenv", "preinstall", "esbenp"],
+  "words": [
+    "direnv",
+    "kimuson",
+    "nodenv",
+    "preinstall",
+    "esbenp",
+    "aspida",
+    "fabbrica",
+    "dmmf",
+    "datamodel",
+    "nocheck"
+  ],
   "ignorePaths": [
     "pnpm-lock.yaml",
     ".vscode/settings.json",
