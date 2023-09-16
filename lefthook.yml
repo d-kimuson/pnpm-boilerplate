@@ -9,8 +9,8 @@ pre-commit:
       run: pnpm cspell lint --gitignore --cache {staged_files}
     # eslint-sample-package:
     #   root: "packages/sample/"
-    #   glob: "/**/*.{tsx,ts,mts,mcs}"
-    #   run: pnpm --filter sample run:eslint
+    #   glob: "*.{tsx,ts,mts,mcs}"
+    #   run: pnpm --filter sample exec eslint --fix {staged_files}
 
 commit-msg:
   parallel: true
