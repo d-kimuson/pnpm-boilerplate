@@ -12,8 +12,7 @@
     "commitizen": "^4.3.0",
     "cspell": "^7.3.6",
     "cz-conventional-changelog": "^3.3.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^14.0.1",
+    "lefthook": "^1.4.11",
     "plop": "^4.0.0",
     "prettier": "^3.0.3",
     "syncpack": "^11.2.1",
@@ -44,7 +43,6 @@
     "run:lint-staged": "lint-staged --allow-empty -r",
     "run:prettier": "prettier .",
     "setup:check-manager": "npx -y only-allow pnpm",
-    "setup:husky": "husky install",
     "typecheck": "turbo run typecheck"
   }
 }
