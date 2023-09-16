@@ -5,6 +5,7 @@
   "private": true,
   "main": "./dist/index.mjs",
   "scripts": {
+    "run:ts": "pnpm tsx --tsconfig ./tsconfig.cli.json",
     "dev": "pnpm /^dev:.*/",
     "dev:tsc": "pnpm build:tsc --watch",
     "dev:esbuild": "WATCH=true node ./scripts/build.mjs",

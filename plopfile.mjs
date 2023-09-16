@@ -49,6 +49,11 @@ export default function ({ setGenerator }) {
       },
       {
         type: "add",
+        path: "packages/{{packageName}}/tsconfig.cli.json",
+        templateFile: "plop-templates/ts-package/tsconfig.cli.json",
+      },
+      {
+        type: "add",
         path: "packages/{{packageName}}/src/index.ts",
         templateFile: "plop-templates/src/index.ts",
       },
