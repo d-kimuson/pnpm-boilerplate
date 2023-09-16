@@ -134,5 +134,9 @@ dist
 .eslintcache
 .stylelintcache
 
+# lefthook
+lefthook-local.yml
+.lefthook-local/**
+
 # extension
 .history

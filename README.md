@@ -1,36 +1,91 @@
 # pnpm boilerplate
 
-## About
-
-- Node.js, pnpm のセットアップ
-- prettier, commitizen, lint-staged, husky のセットアップ
-
-## 前提ツール
-
-- nodenv
-- direnv
-
-## Usage
+## Setup Repository
 
 ```bash
-$ git clone git@github.com:d-kimuson/pnpm-boilerplate.git your-project-name
-$ cd your-project-name
-$ ./scripts/setup_repository.sh
+git clone git@github.com:d-kimuson/pnpm-boilerplate.git my-app
+cd my-app
+./scripts/setup_repository.sh
 ```
 
-## 調整
+---
 
-- ワークスペースを使わない:
-  - pnpm-workspace.yaml を削除する
-  - .npmrc を調整する
-- Node.js のバージョン
-  - Node.js v18 以上をサポートするので適切なバージョンに変更しましょう
-  - 2023 年 6 月現在で v20 は LTS ではなく CURRENT です
-- その他:
-  - .npmrc はプロジェクト構成に併せて調整する
+## セットアップ
 
-## TODO
+- [nodenv](https://github.com/nodenv/nodenv)
+- [direnv](https://github.com/direnv/direnv)
 
-- README に options について書く
-- options の追加
-  - aspida
+を事前にインストールしておく必要があります。
+
+```bash
+$ ./scripts/setup.sh
+```
+
+- apps 毎の node がインストールされる
+- すべてのパッケージの依存関係がインストールされる
+
+## 開発する
+
+```bash
+$ pnpm dev
+```
+
+ワークスペースに属するすべてのパッケージの開発サーバーを起動します。
+
+```bash
+# 単一のパッケージのみ建てたい場合
+$ pnpm --filter "パッケージ名" dev
+# すべてのパッケージと単一の app のみ建てたい場合
+$ pnpm --filter "./packages/**" dev
+$ pnpm --filter "app名" dev
+```
+
+## ビルドする
+
+```bash
+$ pnpm build
+```
+
+## linter を実行する
+
+```bash
+$ pnpm lint # チェックのみ
+$ pnpm fix  # 自動修正も行う
+```
+
+## package または app を追加する
+
+[plop](https://plopjs.com/documentation/) を使って雛形からパッケージを作成できます。
+
+```bash
+# パッケージを作成する
+$ pnpm plop ts-package
+
+# app を作成する
+$ pnpm plop node-app
+```
+
+## その他の開発補助ツールについて
+
+### lefthook
+
+- デフォルトでコミット時に差分に対してlinterの自動修正、commitizenを使った対話型でのコミットメッセージ作成、コミットメッセージのスペルチェックが行われます
+- 個人的に一部の処理を無効にしたり追加したりしたい場合にはプロジェクトルートに `lefthook-local.yml` を設置して設定してください
+  - 参考: https://github.com/evilmartians/lefthook/blob/master/docs/usage.md#local-config
+
+### cspell
+
+スペルチェックを[cspell](https://cspell.org/)で行っています。辞書にない単語が使われているとコミット時やCIで弾かれるので一括で追加したい場合には
+
+```bash
+$ pnpm fixAll:cspell
+```
+
+します。
+`cspell.json` に追加された単語がスペルミスでないことを確認してからコミットしてください。
+
+### pnpm の更新
+
+```bash
+$ ./scripts/update_pnpm.sh
+```
