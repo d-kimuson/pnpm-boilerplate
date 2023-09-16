@@ -1,32 +1,24 @@
 {
   "name": "pnpm-boilerplate",
-  "version": "0.0.1",
   "description": "FIXME",
-  "main": "dist/index.js",
-  "scripts": {
-    "dev": "turbo run dev",
-    "build": "turbo run build",
-    "lint": "pnpm /^lint:.*/",
-    "lint:turbo": "turbo run lint",
-    "lint:prettier": "pnpm run:prettier --check",
-    "lint:cspell": "cspell lint './**/*.{tsx,ts,mts,mcs,mjs,cjs,js,json,md,yml,yaml}' --gitignore --cache",
-    "fix": "pnpm /^fix:.*/",
-    "fix:turbo": "turbo run fix",
-    "fix:prettier": "pnpm run:prettier --write",
-    "fixAll:cspell": "node ./scripts/update_cspell_words.mjs",
-    "typecheck": "turbo run typecheck",
-    "run:lint-staged": "lint-staged --allow-empty -r",
-    "run:prettier": "prettier .",
-    "setup:husky": "husky install",
-    "setup:check-manager": "npx -y only-allow pnpm",
-    "preinstall": "pnpm /^setup:.*/"
-  },
+  "version": "0.0.1",
+  "author": "d-kimuson",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "packageManager": "pnpm@8.7.5",
+  "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cspell": "^7.3.6",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "plop": "^4.0.0",
+    "prettier": "^3.0.3",
+    "syncpack": "^11.2.1",
+    "turbo": "^1.10.14"
+  },
   "engines": {
     "npm": "forbidden, use pnpm",
     "yarn": "forbidden, use pnpm",
@@ -34,16 +26,25 @@
     "node": ">=20"
   },
   "keywords": [],
-  "author": "d-kimuson",
   "license": "MIT",
-  "devDependencies": {
-    "commitizen": "^4.3.0",
-    "cspell": "^6.31.1",
-    "cz-conventional-changelog": "^3.3.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
-    "plop": "^4.0.0",
-    "prettier": "^3.0.3",
-    "turbo": "^1.10.14"
+  "main": "dist/index.js",
+  "packageManager": "pnpm@8.7.5",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "fix": "pnpm /^fix:.*/",
+    "fix:prettier": "pnpm run:prettier --write",
+    "fix:turbo": "turbo run fix",
+    "fixAll:cspell": "node ./scripts/update_cspell_words.mjs",
+    "lint": "pnpm /^lint:.*/",
+    "lint:cspell": "cspell lint './**/*.{tsx,ts,mts,mcs,mjs,cjs,js,json,md,yml,yaml}' --gitignore --cache",
+    "lint:prettier": "pnpm run:prettier --check",
+    "lint:turbo": "turbo run lint",
+    "preinstall": "pnpm /^setup:.*/",
+    "run:lint-staged": "lint-staged --allow-empty -r",
+    "run:prettier": "prettier .",
+    "setup:check-manager": "npx -y only-allow pnpm",
+    "setup:husky": "husky install",
+    "typecheck": "turbo run typecheck"
   }
 }
