@@ -11,7 +11,8 @@
     "fabbrica",
     "dmmf",
     "datamodel",
-    "nocheck"
+    "nocheck",
+    "typecheck"
   ],
   "ignorePaths": [
     "pnpm-lock.yaml",
