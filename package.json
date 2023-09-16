@@ -42,6 +42,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
+    "plop": "^4.0.0",
     "prettier": "^3.0.3",
     "turbo": "^1.10.14"
   }
