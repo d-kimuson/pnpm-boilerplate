@@ -50,12 +50,3 @@ jobs:
 
       - name: lint
         run: pnpm lint
-
-  # build:
-  #   runs-on: ubuntu-latest
-  #   needs: [cache-and-install]
-  #   timeout-minutes: 5
-
-  #   steps:
-  #     - name: lint
-  #       run: pnpm lint
