@@ -3,10 +3,30 @@
   "description": "FIXME",
   "version": "0.0.1",
   "author": "d-kimuson",
+  "main": "dist/index.js",
+  "packageManager": "pnpm@8.7.5",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "fix": "pnpm /^fix:.*/",
+    "fix:prettier": "pnpm run:prettier --write",
+    "fix:turbo": "turbo run fix",
+    "fix:package-json": "syncpack format",
+    "fixAll:cspell": "node ./scripts/update_cspell_words.mjs",
+    "lint": "pnpm /^lint:.*/",
+    "lint:cspell": "cspell lint './**/*.{tsx,ts,mts,mcs,mjs,cjs,js,json,md,yml,yaml}' --gitignore --cache",
+    "lint:prettier": "pnpm run:prettier --check",
+    "lint:turbo": "turbo run lint",
+    "preinstall": "pnpm /^setup:.*/",
+    "run:lint-staged": "lint-staged --allow-empty -r",
+    "run:prettier": "prettier .",
+    "setup:check-manager": "npx -y only-allow pnpm",
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
     "commitizen": "^4.3.0",
@@ -25,24 +45,5 @@
     "node": ">=20"
   },
   "keywords": [],
-  "license": "MIT",
-  "main": "dist/index.js",
-  "packageManager": "pnpm@8.7.5",
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "fix": "pnpm /^fix:.*/",
-    "fix:prettier": "pnpm run:prettier --write",
-    "fix:turbo": "turbo run fix",
-    "fixAll:cspell": "node ./scripts/update_cspell_words.mjs",
-    "lint": "pnpm /^lint:.*/",
-    "lint:cspell": "cspell lint './**/*.{tsx,ts,mts,mcs,mjs,cjs,js,json,md,yml,yaml}' --gitignore --cache",
-    "lint:prettier": "pnpm run:prettier --check",
-    "lint:turbo": "turbo run lint",
-    "preinstall": "pnpm /^setup:.*/",
-    "run:lint-staged": "lint-staged --allow-empty -r",
-    "run:prettier": "prettier .",
-    "setup:check-manager": "npx -y only-allow pnpm",
-    "typecheck": "turbo run typecheck"
-  }
+  "license": "MIT"
 }

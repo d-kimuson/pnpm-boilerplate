@@ -12,7 +12,12 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.preferences.importModuleSpecifier": "non-relative",
   // eslint
-  "eslint.workingDirectories": [{ "pattern": "./packages/*/" }, "."],
+  "eslint.workingDirectories": [
+    { "pattern": "./packages/*/" },
+    {
+      "pattern": "./apps/*/"
+    }
+  ],
   "eslint.validate": ["typescript"],
   // prettier
   "prettier.configPath": ".prettierrc.cjs",
