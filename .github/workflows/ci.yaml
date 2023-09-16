@@ -1,4 +1,4 @@
-name: Checks
+name: CI
 
 on:
   push:
@@ -24,7 +24,6 @@ jobs:
         with:
           node-version-file: ".node-version"
           cache: "pnpm"
-          cache-dependency-path: "pnpm-lock.yaml"
 
       - name: lint
         run: pnpm lint

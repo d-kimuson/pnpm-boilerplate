@@ -1,10 +1,9 @@
+name: syncpack
+
 on:
-  push:
+  pull_request:
     branches:
       - main
-  pull_request:
-    types: [opened, synchronize, reopened]
-  workflow_dispatch:
 
 jobs:
   syncpack:
