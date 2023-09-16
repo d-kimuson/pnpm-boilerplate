@@ -7,7 +7,7 @@
   "packageManager": "pnpm@8.7.5",
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "./node_modules/cz-custom-rule"
     }
   },
   "scripts": {
@@ -31,7 +31,7 @@
   "devDependencies": {
     "commitizen": "^4.3.0",
     "cspell": "^7.3.6",
-    "cz-conventional-changelog": "^3.3.0",
+    "cz-custom-rule": "workspace:*",
     "lefthook": "^1.4.11",
     "plop": "^4.0.0",
     "prettier": "^3.0.3",

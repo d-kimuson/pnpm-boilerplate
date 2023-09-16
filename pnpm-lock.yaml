@@ -11,9 +11,9 @@ devDependencies:
   cspell:
     specifier: ^7.3.6
     version: 7.3.6
-  cz-conventional-changelog:
-    specifier: ^3.3.0
-    version: 3.3.0
+  cz-custom-rule:
+    specifier: workspace:*
+    version: link:packages/cz-custom-rule
   lefthook:
     specifier: ^1.4.11
     version: 1.4.11

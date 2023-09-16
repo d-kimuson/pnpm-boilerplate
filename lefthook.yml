@@ -3,14 +3,18 @@ pre-commit:
   commands:
     prettier:
       glob: "*.{tsx,ts,mts,mcs,mjs,cjs,js,json,md,yml,yaml}"
-      run: pnpm prettier --write --ignore-unknown {staged_files}
+      run: |
+        pnpm prettier --write --ignore-unknown {staged_files}
+        git add {staged_files}
     cspell:
       glob: "*.{tsx,ts,mts,mcs,mjs,cjs,js,json,md,yml,yaml}"
       run: pnpm cspell lint --gitignore --cache {staged_files}
     # eslint-sample-package:
     #   root: "packages/sample/"
     #   glob: "*.{tsx,ts,mts,mcs}"
-    #   run: pnpm --filter sample exec eslint --fix {staged_files}
+    #   run: |
+    #     pnpm --filter sample exec eslint --fix {staged_files}
+    #     git add {staged_files}
 
 commit-msg:
   parallel: true

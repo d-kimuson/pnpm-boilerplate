@@ -16,6 +16,7 @@ const config = {
   sortFirst: [
     "name",
     "description",
+    "private",
     "version",
     "author",
     "main",
