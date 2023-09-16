@@ -55,7 +55,7 @@ export default function ({ setGenerator }) {
       {
         type: "add",
         path: "packages/{{packageName}}/src/index.ts",
-        templateFile: "plop-templates/src/index.ts",
+        templateFile: "plop-templates/ts-package/src/index.ts",
       },
     ],
   });

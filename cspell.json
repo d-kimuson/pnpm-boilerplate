@@ -14,7 +14,9 @@
     "outdir",
     "preinstall",
     "syncpack",
-    "typecheck"
+    "typecheck",
+    "commitizen",
+    "lefthook"
   ],
   "ignorePaths": [
     "pnpm-lock.yaml",
