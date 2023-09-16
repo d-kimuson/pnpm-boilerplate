@@ -2,16 +2,19 @@
   "version": "0.2",
   "language": "en",
   "words": [
-    "direnv",
-    "kimuson",
-    "nodenv",
-    "preinstall",
-    "esbenp",
     "aspida",
-    "fabbrica",
-    "dmmf",
     "datamodel",
-    "nocheck"
+    "direnv",
+    "dmmf",
+    "esbenp",
+    "fabbrica",
+    "kimuson",
+    "nocheck",
+    "nodenv",
+    "outdir",
+    "preinstall",
+    "syncpack",
+    "typecheck"
   ],
   "ignorePaths": [
     "pnpm-lock.yaml",

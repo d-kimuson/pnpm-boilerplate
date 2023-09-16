@@ -1,0 +1,33 @@
+{
+  "name": "{{packageName}}",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "main": "./dist/index.mjs",
+  "scripts": {
+    "run:ts": "pnpm tsx --tsconfig ./tsconfig.cli.json",
+    "dev": "pnpm /^dev:.*/",
+    "dev:tsc": "pnpm build:tsc --watch",
+    "dev:esbuild": "WATCH=true node ./scripts/build.mjs",
+    "build": "pnpm /^build:.*/",
+    "build:esbuild": "node ./scripts/build.mjs",
+    "build:tsc": "tsc -p ./tsconfig.src.json",
+    "run:eslint": "eslint . --cache",
+    "lint": "eslint . --cache",
+    "fix": "pnpm lint --fix",
+    "typecheck": "tsc -p ./tsconfig.src.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.5.9",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "esbuild": "^0.19.2",
+    "eslint-config-custom": "workspace:*",
+    "eslint-import-resolver-typescript": "^3.6.0",
+    "eslint-plugin-import": "^2.28.1",
+    "tsconfig": "workspace:*",
+    "tsx": "^3.12.8",
+    "typescript": "^5.2.2"
+  }
+}
