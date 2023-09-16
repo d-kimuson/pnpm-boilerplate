@@ -1,2 +1,2 @@
 // write your logic here
-export const {} = {};
+export const {} = {}

@@ -29,6 +29,6 @@ const config = {
   ],
   source: [],
   versionGroups: [],
-};
+}
 
-module.exports = config;
+module.exports = config

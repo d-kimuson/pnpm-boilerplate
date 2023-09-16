@@ -1,5 +1,5 @@
 // @ts-check
-import { context, build } from "esbuild";
+import { context, build } from "esbuild"
 
 /**
  * @type {import('esbuild').BuildOptions}
@@ -11,11 +11,11 @@ const config = {
   target: "es2022",
   minify: true,
   sourcemap: true,
-};
+}
 
 if (process.env.WATCH === "true") {
-  const ctx = await context(config);
-  await ctx.watch();
+  const ctx = await context(config)
+  await ctx.watch()
 } else {
-  await build(config);
+  await build(config)
 }

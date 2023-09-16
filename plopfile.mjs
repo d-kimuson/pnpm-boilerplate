@@ -58,7 +58,7 @@ export default function ({ setGenerator }) {
         templateFile: "plop-templates/ts-package/src/index.ts",
       },
     ],
-  });
+  })
 
   setGenerator("node-app", {
     description: "TypeScriptのパッケージを作成する",
@@ -111,5 +111,5 @@ export default function ({ setGenerator }) {
         templateFile: "plop-templates/node-app/src/index.ts",
       },
     ],
-  });
+  })
 }
