@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "author": "d-kimuson",
   "main": "dist/index.js",
-  "packageManager": "pnpm@8.7.5",
+  "packageManager": "pnpm@8.15.4",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-custom-rule"
@@ -41,7 +41,7 @@
   "engines": {
     "npm": "forbidden, use pnpm",
     "yarn": "forbidden, use pnpm",
-    "pnpm": ">=8.7.5",
+    "pnpm": ">=8.15.4",
     "node": ">=20"
   },
   "keywords": [],
