@@ -11,7 +11,7 @@ pre-commit:
         - rebase
     cspell:
       glob: "*.{tsx,ts,mts,mcs,mjs,cjs,js,json,md,yml,yaml}"
-      run: pnpm cspell lint --gitignore --cache {staged_files}
+      run: pnpm cspell lint --no-must-find-files --gitignore --cache {staged_files}
       skip:
         - merge
         - rebase
