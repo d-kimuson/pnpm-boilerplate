@@ -1,31 +1,22 @@
 {
   "name": "backend",
-  "description": "",
+  "description": "backend のサンプルアプリです。",
   "private": true,
   "version": "0.0.0",
-  "main": "./dist/index.mjs",
   "scripts": {
-    "ts:run": "pnpm tsx --tsconfig ./tsconfig.src.json",
-    "dev": "pnpm /^dev:.*/",
-    "dev:tsc": "pnpm build:tsc --watch",
-    "dev:esbuild": "WATCH=true node ./scripts/build.mjs",
-    "build": "pnpm /^build:.*/",
-    "build:esbuild": "node ./scripts/build.mjs",
-    "build:tsc": "tsc -p ./tsconfig.src.json",
+    "ts:run": "pnpm tsx --tsconfig ./tsconfig.json",
     "lint": "eslint . --cache --no-error-on-unmatched-pattern",
     "fix": "pnpm lint --fix",
-    "typecheck": "tsc -p ./tsconfig.src.json"
+    "typecheck": "tsc -p ./tsconfig.json"
   },
   "devDependencies": {
     "@types/node": "^20.11.28",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "better-typescript-lib": "^2.4.0",
-    "esbuild": "^0.19.2",
     "eslint-config-custom": "workspace:*",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
     "tsconfig": "workspace:*",
-    "tsx": "^3.12.8",
     "typescript": "^5.4.2"
   }
 }
