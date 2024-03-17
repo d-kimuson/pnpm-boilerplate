@@ -29,6 +29,8 @@
     "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
+    "@actions/github": "^6.0.0",
+    "@octokit/rest": "^20.0.2",
     "commitizen": "^4.3.0",
     "cspell": "^7.3.9",
     "cz-custom-rule": "workspace:*",
