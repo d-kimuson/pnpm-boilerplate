@@ -6,7 +6,7 @@ PROJECT_DIR_NAME=$(pwd | rev | cut -d '/' -f 1 | rev)
 
 sed -i -e "s/pnpm-boilerplate/$PROJECT_DIR_NAME/g" package.json
 
-nodenv install -s
+mise i
 corepack enable pnpm
 ./scripts/update_pnpm.sh
 ./scripts/setup.sh

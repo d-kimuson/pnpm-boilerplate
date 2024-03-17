@@ -12,7 +12,7 @@ cd my-app
 
 ## セットアップ
 
-- [nodenv](https://github.com/nodenv/nodenv)
+- [mise](https://github.com/jdx/mise)
 - [direnv](https://github.com/direnv/direnv)
 
 を事前にインストールしておく必要があります。
