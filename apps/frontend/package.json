@@ -17,16 +17,16 @@
     "typecheck": "tsc -p ./tsconfig.src.json"
   },
   "devDependencies": {
-    "@types/node": "^20.11.28",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "better-typescript-lib": "^2.4.0",
-    "esbuild": "^0.19.2",
-    "eslint": "^8.57.0",
+    "@types/node": "20.11.28",
+    "@typescript-eslint/eslint-plugin": "6.21.0",
+    "better-typescript-lib": "2.4.0",
+    "esbuild": "0.19.2",
+    "eslint": "8.57.0",
     "eslint-config-custom": "workspace:*",
-    "eslint-import-resolver-typescript": "^3.6.1",
-    "eslint-plugin-import": "^2.29.1",
+    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-plugin-import": "2.29.1",
     "tsconfig": "workspace:*",
-    "tsx": "^3.12.8",
-    "typescript": "^5.4.2"
+    "tsx": "3.12.8",
+    "typescript": "5.4.2"
   }
 }
