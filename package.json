@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "author": "d-kimuson",
   "main": "dist/index.js",
-  "packageManager": "pnpm@8.15.4",
+  "packageManager": "pnpm@8.15.5",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-custom-rule"
