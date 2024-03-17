@@ -53,18 +53,6 @@ $ pnpm lint # チェックのみ
 $ pnpm fix  # 自動修正も行う
 ```
 
-## package または app を追加する
-
-[plop](https://plopjs.com/documentation/) を使って雛形からパッケージを作成できます。
-
-```bash
-# パッケージを作成する
-$ pnpm plop ts-package
-
-# app を作成する
-$ pnpm plop node-app
-```
-
 ## その他の開発補助ツールについて
 
 ### lefthook

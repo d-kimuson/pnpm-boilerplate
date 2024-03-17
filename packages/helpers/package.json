@@ -1,5 +1,5 @@
 {
-  "name": "{{packageName}}",
+  "name": "helpers",
   "version": "0.0.0",
   "description": "",
   "private": true,
