@@ -4,7 +4,7 @@ pre-commit:
     prettier:
       glob: "*.{tsx,ts,mts,mcs,mjs,cjs,js,json,md,yml,yaml}"
       run: |
-        pnpm prettier --write --ignore-unknown --cache {staged_files}
+        pnpm prettier --write --ignore-unknown --no-error-on-unmatched-pattern --cache {staged_files}
       staged_fixed: true
       skip:
         - merge

@@ -1,9 +1,8 @@
 {
   "name": "helpers",
-  "version": "0.0.0",
   "description": "",
   "private": true,
-  "type": "module",
+  "version": "0.0.0",
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -15,11 +14,15 @@
   "scripts": {
     "dev": "tsup --watch --clean=false",
     "build": "tsup",
-    "lint": "eslint . --cache",
+    "lint": "eslint . --cache --no-error-on-unmatched-pattern",
     "fix": "pnpm lint --fix",
     "typecheck": "tsc -p ./tsconfig.json",
     "test": "vitest --run --shard=${TEST_SHARED:-1/1}",
     "test:watch": "vitest"
+  },
+  "dependencies": {
+    "neverthrow": "^6.1.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^20.11.28",
@@ -33,8 +36,5 @@
     "typescript": "^5.4.2",
     "vitest": "^1.4.0"
   },
-  "dependencies": {
-    "neverthrow": "^6.1.0",
-    "zod": "^3.22.4"
-  }
+  "type": "module"
 }

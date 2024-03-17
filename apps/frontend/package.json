@@ -1,8 +1,8 @@
 {
   "name": "frontend",
-  "version": "0.0.0",
   "description": "",
   "private": true,
+  "version": "0.0.0",
   "main": "./dist/index.mjs",
   "scripts": {
     "ts:run": "pnpm tsx --tsconfig ./tsconfig.src.json",
@@ -12,21 +12,21 @@
     "build": "pnpm /^build:.*/",
     "build:esbuild": "node ./scripts/build.mjs",
     "build:tsc": "tsc -p ./tsconfig.src.json",
-    "lint": "eslint . --cache",
+    "lint": "eslint . --cache --no-error-on-unmatched-pattern",
     "fix": "pnpm lint --fix",
     "typecheck": "tsc -p ./tsconfig.src.json"
   },
-  "dependencies": {},
   "devDependencies": {
     "@types/node": "^20.5.9",
     "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "better-typescript-lib": "^2.4.0",
     "esbuild": "^0.19.2",
+    "eslint": "^8.57.0",
     "eslint-config-custom": "workspace:*",
     "eslint-import-resolver-typescript": "^3.6.0",
     "eslint-plugin-import": "^2.28.1",
     "tsconfig": "workspace:*",
     "tsx": "^3.12.8",
-    "typescript": "^5.2.2",
-    "better-typescript-lib": "^2.4.0"
+    "typescript": "^5.2.2"
   }
 }
