@@ -36,7 +36,7 @@
     "cz-custom-rule": "workspace:*",
     "lefthook": "1.6.7",
     "prettier": "3.2.5",
-    "syncpack": "11.2.1",
+    "syncpack": "12.3.0",
     "turbo": "1.12.5"
   },
   "engines": {
