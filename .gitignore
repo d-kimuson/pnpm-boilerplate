@@ -140,3 +140,6 @@ lefthook-local.yml
 
 # extension
 .history
+
+# turborepo
+.turbo

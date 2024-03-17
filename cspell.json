@@ -16,7 +16,12 @@
     "syncpack",
     "typecheck",
     "commitizen",
-    "lefthook"
+    "lefthook",
+    "tada",
+    "tsup",
+    "Uncapitalize",
+    "Omittable",
+    "neverthrow"
   ],
   "ignorePaths": [
     "pnpm-lock.yaml",

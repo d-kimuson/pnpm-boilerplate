@@ -1,3 +1,1 @@
-module.exports = {
-  extends: ["custom/node"],
-}
+module.exports = {}
