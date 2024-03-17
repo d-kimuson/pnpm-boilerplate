@@ -30,12 +30,12 @@
   },
   "devDependencies": {
     "commitizen": "^4.3.0",
-    "cspell": "^7.3.6",
+    "cspell": "^7.3.9",
     "cz-custom-rule": "workspace:*",
-    "lefthook": "^1.4.11",
-    "prettier": "^3.0.3",
+    "lefthook": "^1.6.7",
+    "prettier": "^3.2.5",
     "syncpack": "^11.2.1",
-    "turbo": "^1.10.14"
+    "turbo": "^1.12.5"
   },
   "engines": {
     "npm": "forbidden, use pnpm",
