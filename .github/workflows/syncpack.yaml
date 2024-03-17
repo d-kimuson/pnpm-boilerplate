@@ -17,3 +17,7 @@ jobs:
       - uses: JamieMason/syncpack-github-action@0.2.3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          package-manager: "pnpm"
+          lockfile-mismatches: "fix"
+          semver-range-mismatches: "fix"
