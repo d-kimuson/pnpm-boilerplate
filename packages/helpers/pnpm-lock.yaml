@@ -6,42 +6,42 @@ settings:
 
 dependencies:
   neverthrow:
-    specifier: ^6.1.0
+    specifier: 6.1.0
     version: 6.1.0
   zod:
-    specifier: ^3.22.4
+    specifier: 3.22.4
     version: 3.22.4
 
 devDependencies:
   '@types/node':
-    specifier: ^20.11.28
+    specifier: 20.11.28
     version: 20.11.28
   '@typescript-eslint/eslint-plugin':
-    specifier: ^6.21.0
+    specifier: 6.21.0
     version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
   eslint-config-custom:
     specifier: workspace:*
     version: link:../eslint-config-custom
   eslint-import-resolver-typescript:
-    specifier: ^3.6.1
+    specifier: 3.6.1
     version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
   eslint-plugin-import:
-    specifier: ^2.29.1
+    specifier: 2.29.1
     version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
   tsconfig:
     specifier: workspace:*
     version: link:../tsconfig
   tsd:
-    specifier: ^0.30.7
+    specifier: 0.30.7
     version: 0.30.7
   tsup:
-    specifier: ^8.0.2
+    specifier: 8.0.2
     version: 8.0.2(typescript@5.4.2)
   typescript:
-    specifier: ^5.4.2
+    specifier: 5.4.2
     version: 5.4.2
   vitest:
-    specifier: ^1.4.0
+    specifier: 1.4.0
     version: 1.4.0(@types/node@20.11.28)
 
 packages:
