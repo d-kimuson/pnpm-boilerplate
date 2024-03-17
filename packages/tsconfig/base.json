@@ -4,12 +4,19 @@
   "display": "Default",
   "compilerOptions": {
     "composite": false,
-    "declaration": true,
-    "declarationMap": true,
-    "inlineSources": false,
-    "isolatedModules": true,
-    "preserveWatchOutput": true,
-    "skipLibCheck": true
+    "incremental": true,
+    "allowJs": true,
+    "checkJs": true,
+    "resolveJsonModule": true,
+    
+    // linter 責務のルールを無効化
+    "noImplicitReturns": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": false,
+
+    // pnpm や workspace の symlink で壊れないように
+    "preserveSymlinks": true,
   },
   "exclude": ["node_modules"]
 }
