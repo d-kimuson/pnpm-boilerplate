@@ -22,11 +22,11 @@
     "lint:cspell": "cspell lint './**/*.{tsx,ts,mts,mcs,mjs,cjs,js,json,md,yml,yaml}' --gitignore --cache",
     "lint:prettier": "pnpm run:prettier --check",
     "lint:turbo": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
     "preinstall": "pnpm /^setup:.*/",
-    "run:lint-staged": "lint-staged --allow-empty -r",
     "run:prettier": "prettier .",
-    "setup:check-manager": "npx -y only-allow pnpm",
-    "typecheck": "turbo run typecheck"
+    "setup:check-manager": "npx -y only-allow pnpm"
   },
   "devDependencies": {
     "@actions/github": "^6.0.0",

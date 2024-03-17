@@ -14,8 +14,7 @@
     "build:tsc": "tsc -p ./tsconfig.src.json",
     "lint": "eslint . --cache",
     "fix": "pnpm lint --fix",
-    "typecheck": "tsc -p ./tsconfig.src.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "typecheck": "tsc -p ./tsconfig.src.json"
   },
   "dependencies": {},
   "devDependencies": {
