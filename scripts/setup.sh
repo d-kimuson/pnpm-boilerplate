@@ -7,6 +7,6 @@ apps=""
 
 mise i
 corepack enable
-corepack prepare pnpm@8.15.4 --activate
+corepack prepare pnpm@8.15.5 --activate
 
 pnpm --filter "*" i
