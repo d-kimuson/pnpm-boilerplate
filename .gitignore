@@ -143,3 +143,6 @@ lefthook-local.yml
 
 # turborepo
 .turbo
+
+# env
+.env.secret

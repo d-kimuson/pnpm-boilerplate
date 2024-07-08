@@ -26,12 +26,6 @@ pre-commit:
     #     - merge
     #     - rebase
 
-# commit-msg:
-#   parallel: true
-#   commands:
-#     spell-check:
-#       run: pnpm cspell --no-summary {1}
-
 prepare-commit-msg:
   parallel: true
   scripts:
