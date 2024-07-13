@@ -12,7 +12,6 @@ cd my-app
 
 ## セットアップ
 
-- [mise](https://github.com/jdx/mise)
 - [direnv](https://github.com/direnv/direnv)
 
 を事前にインストールしておく必要があります。
@@ -71,9 +70,3 @@ $ pnpm fixAll:cspell
 
 します。
 `cspell.json` に追加された単語がスペルミスでないことを確認してからコミットしてください。
-
-### pnpm の更新
-
-```bash
-$ ./scripts/update_pnpm.sh
-```
