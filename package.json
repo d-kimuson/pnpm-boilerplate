@@ -1,6 +1,7 @@
 {
   "name": "pnpm-boilerplate",
   "description": "FIXME",
+  "private": true,
   "version": "0.0.1",
   "author": "d-kimuson",
   "main": "dist/index.js",
@@ -19,6 +20,7 @@
     "lint:turbo": "turbo run lint",
     "typecheck": "turbo run typecheck",
     "test": "turbo run test",
+    "generate:env": "op inject --in-file .env.secret.template --out-file .env.secret --force",
     "preinstall": "pnpm /^setup:.*/",
     "run:prettier": "prettier --ignore-unknown --no-error-on-unmatched-pattern --cache",
     "setup:check-manager": "npx -y only-allow pnpm"

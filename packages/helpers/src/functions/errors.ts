@@ -48,7 +48,8 @@ export const parseZod = <
 ) => {
   return ok(schema.safeParse(data)).andThen((parsed) => {
     if (parsed.success) {
-      return ok<O, never>(parsed.data)
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+      return ok<O>(parsed.data)
     } else {
       return customErr("ZOD_VALIDATION_ERROR", {
         isAsync: false,

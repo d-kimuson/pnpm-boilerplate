@@ -1,12 +1,27 @@
 {
   "name": "eslint-config-custom",
-  "private": true,
   "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    "./js-config": {
+      "import": "./js-config.mjs",
+      "types": "./js-config.d.mts"
+    },
+    "./ts-config": {
+      "import": "./ts-config.mjs",
+      "types": "./ts-config.d.mts"
+    }
+  },
   "devDependencies": {
+    "@eslint/js": "^9.6.0",
+    "@types/eslint__js": "^8.42.3",
     "@typescript-eslint/eslint-plugin": "7.2.0",
     "@typescript-eslint/parser": "7.2.0",
+    "eslint": "8.57.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-import-resolver-typescript": "3.6.1",
-    "eslint-plugin-import": "2.29.1"
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-unused-imports": "^4.0.0",
+    "typescript-eslint": "^7.16.0"
   }
 }

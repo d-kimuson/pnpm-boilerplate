@@ -10,6 +10,7 @@
     "dmmf",
     "esbenp",
     "fabbrica",
+    "IIFE",
     "kimuson",
     "lefthook",
     "mise",
@@ -20,9 +21,11 @@
     "preinstall",
     "syncpack",
     "tada",
+    "TSES",
     "tsup",
     "typecheck",
-    "Uncapitalize"
+    "Uncapitalize",
+    "ununsed"
   ],
   "ignorePaths": [
     "pnpm-lock.yaml",

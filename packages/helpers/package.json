@@ -1,8 +1,8 @@
 {
   "name": "helpers",
   "description": "",
-  "private": true,
   "version": "0.0.0",
+  "type": "module",
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -35,6 +35,5 @@
     "tsup": "8.0.2",
     "typescript": "5.4.2",
     "vitest": "1.4.0"
-  },
-  "type": "module"
+  }
 }

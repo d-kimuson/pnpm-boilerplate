@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/consistent-type-assertions */
+
 import type { IsNever } from "../types"
 
 type IsStrUnion<T, Tmp = T extends string ? true : false> = boolean extends Tmp

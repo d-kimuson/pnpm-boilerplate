@@ -1,8 +1,8 @@
 {
   "name": "frontend",
   "description": "frontend のサンプルアプリです。",
-  "private": true,
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "lint": "eslint . --cache --no-error-on-unmatched-pattern",
     "fix": "pnpm lint --fix",

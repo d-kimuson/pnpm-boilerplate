@@ -15,12 +15,14 @@ export const toMutable = <T>(immutableArray: ReadonlyArray<T>): Array<T> =>
 
 export function assertNonNull<T>(value: T): asserts value is NonNullable<T> {
   if (value === null || value === undefined) {
-    throw new Error(`Expected value to be non-null, but received ${value}`)
+    throw new Error(
+      `Expected value to be non-null, but received ${String(value)}`
+    )
   }
 }
 
 export const exhaustiveCheckAndThrow = (value: never): never => {
-  throw new Error(`ExhaustiveCheckFailed. value: ${value}`)
+  throw new Error(`ExhaustiveCheckFailed. value: ${String(value)}`)
 }
 
 export const typedIncludes = <T, Tuple extends ReadonlyArray<T>>(

@@ -1,7 +1,6 @@
 {
   "name": "backend",
   "description": "backend のサンプルアプリです。",
-  "private": true,
   "version": "0.0.0",
   "scripts": {
     "ts:run": "pnpm tsx --tsconfig ./tsconfig.json",
