@@ -30,7 +30,7 @@
     "@octokit/rest": "20.0.2",
     "cspell": "7.3.9",
     "lefthook": "1.6.7",
-    "prettier": "3.2.5",
+    "prettier": "3.3.3",
     "syncpack": "11.2.1",
     "turbo": "^2.0.6"
   },
