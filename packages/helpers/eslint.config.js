@@ -13,6 +13,8 @@ const eslintConfig = [
     files: ["**/*.test.ts"],
     rules: {
       "@typescript-eslint/consistent-type-assertions": ["off"],
+      "@typescript-eslint/no-unsafe-call": ["off"],
+      "@typescript-eslint/no-unsafe-member-access": ["off"],
     },
   },
 ]

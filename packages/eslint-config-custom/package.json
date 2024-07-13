@@ -1,7 +1,6 @@
 {
   "name": "eslint-config-custom",
   "version": "0.0.0",
-  "type": "module",
   "exports": {
     "./js-config": {
       "import": "./js-config.mjs",
@@ -23,5 +22,6 @@
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-unused-imports": "^4.0.0",
     "typescript-eslint": "^7.16.0"
-  }
+  },
+  "type": "module"
 }

@@ -1,6 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
+  "globalDependencies": ["**/.env.*local", "pnpm-lock.yaml"],
   "tasks": {
     "dev": {
       "cache": false,
@@ -10,8 +10,12 @@
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
-    "lint": {},
-    "fix": {},
+    "lint": {
+      "dependsOn": ["^build"]
+    },
+    "fix": {
+      "dependsOn": ["^build"]
+    },
     "typecheck": {
       "dependsOn": ["^build"]
     },

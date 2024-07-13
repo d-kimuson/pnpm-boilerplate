@@ -10,7 +10,7 @@ runs:
         node-version-file: ".node-version"
 
     - uses: pnpm/action-setup@v2
-      name: Setup Pnpm
+      name: Setup PNPM
       with:
         # version: XXX # If not specified, package.json#packageManager is used.
         run_install: false
@@ -30,4 +30,4 @@ runs:
 
     - name: Install dependencies
       shell: bash
-      run: pnpm --filter "*" i --frozen-lockfile
+      run: pnpm i --frozen-lockfile

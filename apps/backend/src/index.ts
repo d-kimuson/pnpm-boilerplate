@@ -6,7 +6,7 @@ main()
   .then(() => {
     console.log("done")
   })
-  .catch((err) => {
+  .catch((err: unknown) => {
     console.error(err)
     process.exit(1)
   })

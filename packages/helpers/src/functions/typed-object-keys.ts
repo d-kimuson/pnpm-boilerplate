@@ -37,7 +37,7 @@ export const typedObjectKeys = <
 /**
  * @desc Contains optional properties
  */
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/explicit-function-return-type
+
 export const typedObjectKeysStrict = <Obj extends object>(target: Obj) => {
   return typedObjectKeys(target as RemoveOmittable<Obj>)
 }
