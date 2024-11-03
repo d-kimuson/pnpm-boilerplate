@@ -1,11 +1,11 @@
 {
   "name": "pnpm-boilerplate",
-  "description": "FIXME",
+  "description": "pnpm boilerplate",
   "private": true,
   "version": "0.0.1",
   "author": "d-kimuson",
   "main": "dist/index.js",
-  "packageManager": "pnpm@8.15.5",
+  "packageManager": "pnpm@9.12.3",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
@@ -37,7 +37,7 @@
   "engines": {
     "npm": "forbidden, use pnpm",
     "yarn": "forbidden, use pnpm",
-    "pnpm": ">=8.15.5",
+    "pnpm": ">=9.12.3",
     "node": ">=20"
   },
   "keywords": [],
