@@ -1,5 +1,5 @@
 import { ok, err, errAsync } from "neverthrow"
-import type { Expand } from "@/types.js"
+import type { Expand } from "../types.js"
 import type { ResultAsync, Err } from "neverthrow"
 import type { z } from "zod"
 
@@ -34,7 +34,7 @@ export const customErr = <
   const errObj = customErrObj(kind, options?.data)
 
   // @ts-expect-error -- いい感じになるので問題ない
-  return options?.isAsync ?? false ? errAsync(errObj) : err(errObj)
+  return (options?.isAsync ?? false) ? errAsync(errObj) : err(errObj)
 }
 
 export const parseZod = <

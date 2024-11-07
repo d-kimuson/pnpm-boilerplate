@@ -1,5 +1,13 @@
+import { typedRange } from "helpers"
+import { dep } from "./dep"
+
+// eslint-disable-next-line @typescript-eslint/require-await
 const main = async () => {
-  // write your code here
+  for (const i of typedRange(0, 3)) {
+    console.log(i)
+  }
+
+  console.log(dep)
 }
 
 main()

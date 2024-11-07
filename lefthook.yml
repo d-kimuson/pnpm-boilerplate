@@ -5,7 +5,7 @@ pre-commit:
       glob: "*.{tsx,ts,mts,mcs,mjs,cjs,js,json,md,yml,yaml}"
       run: |
         pnpm run:prettier --write {staged_files}
-      staged_fixed: true
+      stage_fixed: true
       skip:
         - merge
         - rebase
@@ -20,7 +20,7 @@ pre-commit:
     backend-eslint:
       root: "apps/backend/"
       glob: "*.{ts,tsx,mts,mcs,js,jsx,mjs,cjs}"
-      staged_fixed: true
+      stage_fixed: true
       run: |
         pnpm --filter backend exec eslint --no-error-on-unmatched-pattern --cache --fix {staged_files}
       skip:
@@ -30,7 +30,7 @@ pre-commit:
     frontend-eslint:
       root: "apps/frontend/"
       glob: "*.{ts,tsx,mts,mcs,js,jsx,mjs,cjs}"
-      staged_fixed: true
+      stage_fixed: true
       run: |
         pnpm --filter frontend exec eslint --no-error-on-unmatched-pattern --cache --fix {staged_files}
       skip:
@@ -40,7 +40,7 @@ pre-commit:
     helpers-eslint:
       root: "packages/helpers/"
       glob: "*.{ts,tsx,mts,mcs,js,jsx,mjs,cjs}"
-      staged_fixed: true
+      stage_fixed: true
       run: |
         pnpm --filter helpers exec eslint --no-error-on-unmatched-pattern --cache --fix {staged_files}
       skip:

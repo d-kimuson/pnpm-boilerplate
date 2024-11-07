@@ -1,17 +1,16 @@
 {
   "name": "helpers",
-  "description": "",
+  "description": "shared helpers package",
   "version": "0.0.0",
   "exports": {
     ".": {
+      "<project-name>/src": "./src/index.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs",
-      "node": "./dist/index.cjs",
       "default": "./dist/index.js"
     }
   },
   "scripts": {
-    "dev": "tsup --watch --clean=false",
     "build": "tsup",
     "lint": "eslint . --cache --no-error-on-unmatched-pattern",
     "fix": "pnpm lint --fix",

@@ -4,6 +4,7 @@
   "compilerOptions": {
     "target": "es2022",
     "lib": ["es2023"],
-    "customConditions": ["<project-name>/src"]
+    "module": "Node16",
+    "moduleResolution": "Node16"
   }
 }

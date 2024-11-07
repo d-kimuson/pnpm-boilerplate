@@ -1,4 +1,4 @@
-import type { ArrayAtLeastN } from "@/types"
+import type { ArrayAtLeastN } from "../types"
 
 export const assertMinLength = <T, L extends number>(
   arr: T[],

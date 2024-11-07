@@ -2,10 +2,11 @@
   "name": "frontend",
   "description": "frontend のサンプルアプリです。",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "lint": "eslint . --cache --no-error-on-unmatched-pattern",
     "fix": "pnpm lint --fix",
-    "typecheck": "tsc -p ./tsconfig.json"
+    "typecheck": "tsc -p ./tsconfig.json --noEmit"
   },
   "devDependencies": {
     "@types/node": "20.11.28",
@@ -15,6 +16,5 @@
     "eslint-config-custom": "workspace:*",
     "tsconfig": "workspace:*",
     "typescript": "5.4.2"
-  },
-  "type": "module"
+  }
 }

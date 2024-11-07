@@ -3,9 +3,8 @@
   "extends": "./base.json",
   "compilerOptions": {
     "jsx": "preserve",
-    "moduleResolution": "bundler",
-    "module": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "target": "esnext"
+    "target": "esnext",
+    "customConditions": ["<project-name>/src"]
   }
 }

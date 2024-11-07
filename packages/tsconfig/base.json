@@ -16,7 +16,11 @@
     "noFallthroughCasesInSwitch": false,
 
     // pnpm や workspace の symlink で壊れないように
-    "preserveSymlinks": true
+    "preserveSymlinks": true,
+
+    // module 解決オプション
+    "module": "ESNext",
+    "moduleResolution": "Bundler"
   },
   "exclude": ["node_modules"]
 }

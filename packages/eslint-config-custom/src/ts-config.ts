@@ -1,7 +1,8 @@
 // @ts-check
+import { FlatConfig } from "@typescript-eslint/utils/ts-eslint"
 import tsEslint from "typescript-eslint"
 
-export const tsConfig = (/** @type {string} */ rootDir) =>
+export const tsConfig = (rootDir: string): FlatConfig.ConfigArray =>
   tsEslint.config(
     ...tsEslint.configs.strictTypeChecked,
     {
