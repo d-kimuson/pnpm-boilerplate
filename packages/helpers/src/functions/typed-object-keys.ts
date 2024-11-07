@@ -14,19 +14,14 @@ type RemoveOmittable<T extends object> = {
   [K in keyof T as IsPossibleUndef<T[K]> extends true ? never : K]: T[K]
 }
 
-export const typedObjectKeys = <
-  Obj extends object,
-  T = keyof Obj,
-  IsLiteralStr = IsLiteral<T, string>,
-  IsLiteralNum = IsLiteral<T, number>,
->(
+export const typedObjectKeys = <Obj extends object, T = keyof Obj>(
   target: Obj
 ) =>
-  Object.keys(target) as unknown as boolean extends IsLiteralStr
+  Object.keys(target) as unknown as boolean extends IsLiteral<T, string>
     ? T[]
-    : IsLiteralStr extends true
+    : IsLiteral<T, number> extends true
       ? T[]
-      : IsLiteralNum extends true
+      : IsLiteral<T, number> extends true
         ? T extends number
           ? `${T}`[]
           : never
