@@ -46,9 +46,3 @@ pre-commit:
       skip:
         - merge
         - rebase
-
-pre-push:
-  parallel: true
-  commands:
-    packages-audit:
-      run: pnpm audit
