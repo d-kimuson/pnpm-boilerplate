@@ -5,7 +5,6 @@ const config = {
   filter: ".",
   indent: "  ",
   semverGroups: [],
-  semverRange: "",
   sortAz: [
     "dependencies",
     "devDependencies",
