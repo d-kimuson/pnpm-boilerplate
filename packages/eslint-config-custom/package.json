@@ -13,24 +13,24 @@
       "types": "./dist/ts-config.d.ts"
     }
   },
-  "type": "module",
   "scripts": {
     "dev": "tsup --watch --clean=false",
     "build": "tsup"
   },
   "devDependencies": {
-    "@eslint/js": "^9.7.0",
-    "@types/eslint__js": "^8.42.3",
+    "@eslint/js": "9.7.0",
+    "@types/eslint__js": "8.42.3",
     "@typescript-eslint/eslint-plugin": "7.16.0",
-    "@typescript-eslint/parser": "^7.16.0",
-    "@typescript-eslint/utils": "^7.18.0",
+    "@typescript-eslint/parser": "7.16.0",
+    "@typescript-eslint/utils": "7.18.0",
     "eslint": "9.7.0",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-prettier": "9.1.0",
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-unused-imports": "^4.0.0",
+    "eslint-plugin-unused-imports": "4.0.0",
     "tsconfig": "workspace:*",
     "tsup": "8.0.2",
-    "typescript-eslint": "^7.16.0"
-  }
+    "typescript-eslint": "7.16.0"
+  },
+  "type": "module"
 }
