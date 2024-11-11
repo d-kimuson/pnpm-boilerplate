@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@types/node": "20.11.28",
-    "@typescript-eslint/eslint-plugin": "7.16.0",
+    "@typescript-eslint/eslint-plugin": "8.14.0",
     "better-typescript-lib": "2.6.0",
     "esbuild": "^0.24.0",
     "eslint": "9.7.0",
