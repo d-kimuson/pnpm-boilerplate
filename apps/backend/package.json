@@ -2,7 +2,6 @@
   "name": "backend",
   "description": "backend のサンプルアプリです。",
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "pnpm ts:run ./src/index.ts",
     "lint": "eslint . --cache --no-error-on-unmatched-pattern",
@@ -16,13 +15,14 @@
   },
   "devDependencies": {
     "@types/node": "20.11.28",
-    "@typescript-eslint/eslint-plugin": "7.16.0",
+    "@typescript-eslint/eslint-plugin": "8.14.0",
     "better-typescript-lib": "2.6.0",
-    "esbuild": "^0.24.0",
+    "esbuild": "0.24.0",
     "eslint": "9.7.0",
     "eslint-config-custom": "workspace:*",
     "tsconfig": "workspace:*",
-    "tsx": "^4.19.2",
+    "tsx": "4.19.2",
     "typescript": "5.4.2"
-  }
+  },
+  "type": "module"
 }
