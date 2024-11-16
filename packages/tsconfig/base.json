@@ -19,6 +19,5 @@
     // module 解決オプション
     "module": "ESNext",
     "moduleResolution": "Bundler"
-  },
-  "exclude": ["node_modules"]
+  }
 }

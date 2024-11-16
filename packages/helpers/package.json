@@ -12,7 +12,7 @@
     }
   },
   "scripts": {
-    "dev": "tsup --watch",
+    "dev": "pnpm typecheck --watch",
     "build": "tsup --clean",
     "lint": "pnpm eslint:run .",
     "fix": "pnpm lint --fix",
