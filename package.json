@@ -1,11 +1,8 @@
 {
   "name": "pnpm-boilerplate",
   "description": "pnpm boilerplate",
-  "private": true,
   "version": "0.0.1",
-  "author": "d-kimuson",
   "main": "dist/index.js",
-  "packageManager": "pnpm@9.12.3",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
@@ -40,6 +37,9 @@
     "pnpm": ">=9.12.3",
     "node": ">=20"
   },
+  "packageManager": "pnpm@9.12.3",
+  "private": true,
+  "author": "d-kimuson",
   "keywords": [],
   "license": "MIT"
 }

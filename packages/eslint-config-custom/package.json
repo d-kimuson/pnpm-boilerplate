@@ -1,6 +1,7 @@
 {
   "name": "eslint-config-custom",
   "version": "0.0.0",
+  "type": "module",
   "exports": {
     "./js-config": "./src/js-config.ts",
     "./ts-config": "./src/ts-config.ts"
@@ -22,6 +23,5 @@
     "tsconfig": "workspace:*",
     "tsup": "8.3.5",
     "typescript-eslint": "^8.14.0"
-  },
-  "type": "module"
+  }
 }
