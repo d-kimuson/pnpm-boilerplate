@@ -3,9 +3,9 @@ import { defineConfig } from "tsup"
 export default defineConfig({
   entry: ["src/index.ts"],
   dts: true,
-  sourcemap: "inline",
+  sourcemap: true,
   target: "esnext",
   format: ["esm", "cjs"],
-  tsconfig: "tsconfig.json",
+  tsconfig: "tsconfig.src.json",
   external: [],
 })

@@ -1,9 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "./base.json",
+  "extends": ["./base.json", "@tsconfig/node22/tsconfig.json"],
   "compilerOptions": {
-    "target": "es2022",
-    "lib": ["es2023"],
     "customConditions": ["<project-name>/src"]
   }
 }

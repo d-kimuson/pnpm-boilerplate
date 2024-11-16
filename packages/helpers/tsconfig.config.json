@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "tsconfig/config.json",
+  "compilerOptions": {
+    "composite": true
+  },
+  "include": ["tsup.config.ts", "eslint.config.js"]
+}

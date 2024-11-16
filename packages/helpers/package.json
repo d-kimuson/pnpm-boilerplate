@@ -14,7 +14,7 @@
     "build": "tsup",
     "lint": "eslint . --cache --no-error-on-unmatched-pattern",
     "fix": "pnpm lint --fix",
-    "typecheck": "tsc -p ./tsconfig.json",
+    "typecheck": "tsc -p ./tsconfig.src.json --noEmit",
     "test": "vitest --run --shard=${TEST_SHARED:-1/1}",
     "test:watch": "vitest"
   },

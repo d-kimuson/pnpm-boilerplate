@@ -41,7 +41,7 @@ describe("typedObjectKeys", () => {
       const keys = typedObjectKeys({ 0: "value" } as {
         0: string
       })
-      expectType<"0"[]>(keys)
+      expectType<0[]>(keys)
       expect(keys).toStrictEqual(["0"])
     })
 
