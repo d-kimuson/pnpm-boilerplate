@@ -8,7 +8,7 @@
     "fix": "pnpm lint --fix",
     "build": "esbuild ./src/index.ts --format=esm --platform=node --bundle --packages=external --outdir=out",
     "typecheck": "tsc -p ./tsconfig.json --noEmit",
-    "ts:run": "tsx --tsconfig ./tsconfig.json -C '<project-name>/src'",
+    "ts:run": "tsx --tsconfig ./tsconfig.src.json -C '<project-name>/src'",
     "eslint:run": "eslint --cache --no-error-on-unmatched-pattern --flag unstable_ts_config"
   },
   "dependencies": {

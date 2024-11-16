@@ -11,7 +11,8 @@
     }
   },
   "scripts": {
-    "build": "tsup",
+    "dev": "tsup --watch",
+    "build": "tsup --clean",
     "lint": "pnpm eslint:run .",
     "fix": "pnpm lint --fix",
     "typecheck": "tsc -p ./tsconfig.src.json --noEmit",

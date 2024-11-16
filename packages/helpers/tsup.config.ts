@@ -12,5 +12,4 @@ export default defineConfig({
   format: ["esm", "cjs"],
   tsconfig: "tsconfig.src.json",
   external: [],
-  clean: true,
 })
