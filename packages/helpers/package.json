@@ -30,7 +30,7 @@
     "@typescript-eslint/eslint-plugin": "8.14.0",
     "@typescript-eslint/utils": "^8.14.0",
     "eslint": "9.15.0",
-    "eslint-config-custom": "workspace:*",
+    "eslint-config": "workspace:*",
     "tsconfig": "workspace:*",
     "tsd": "0.31.2",
     "tsup": "8.0.2",

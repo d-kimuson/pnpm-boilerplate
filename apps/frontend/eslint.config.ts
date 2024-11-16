@@ -1,5 +1,5 @@
-import { jsConfig } from "eslint-config-custom/js-config"
-import { tsConfig } from "eslint-config-custom/ts-config"
+import { jsConfig } from "eslint-config/js-config"
+import { tsConfig } from "eslint-config/ts-config"
 import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint"
 
 const eslintConfig: FlatConfig.ConfigArray = [

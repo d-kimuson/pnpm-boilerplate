@@ -15,7 +15,7 @@
     "@typescript-eslint/utils": "^8.14.0",
     "better-typescript-lib": "2.9.0",
     "eslint": "9.15.0",
-    "eslint-config-custom": "workspace:*",
+    "eslint-config": "workspace:*",
     "tsconfig": "workspace:*",
     "typescript": "5.6.3"
   }
