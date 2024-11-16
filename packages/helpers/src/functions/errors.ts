@@ -1,5 +1,5 @@
 import { ok, err, errAsync } from "neverthrow"
-import type { Expand } from "../types.js"
+import type { Expand } from "../types"
 import type { ResultAsync, Err } from "neverthrow"
 import type { z } from "zod"
 

@@ -2,19 +2,21 @@
   "name": "frontend",
   "description": "frontend のサンプルアプリです。",
   "version": "1.0.0",
-  "type": "module",
   "scripts": {
-    "lint": "eslint . --cache --no-error-on-unmatched-pattern",
+    "lint": "pnpm eslint:run .",
     "fix": "pnpm lint --fix",
-    "typecheck": "tsc -p ./tsconfig.json --noEmit"
+    "typecheck": "tsc -p ./tsconfig.json --noEmit",
+    "eslint:run": "eslint --cache --no-error-on-unmatched-pattern --flag unstable_ts_config"
   },
   "devDependencies": {
-    "@types/node": "20.11.28",
-    "@typescript-eslint/eslint-plugin": "7.16.0",
-    "better-typescript-lib": "2.6.0",
-    "eslint": "9.7.0",
+    "@types/node": "22.9.0",
+    "@typescript-eslint/eslint-plugin": "8.14.0",
+    "@typescript-eslint/utils": "^8.14.0",
+    "better-typescript-lib": "2.9.0",
+    "eslint": "9.15.0",
     "eslint-config-custom": "workspace:*",
     "tsconfig": "workspace:*",
-    "typescript": "5.4.2"
-  }
+    "typescript": "5.6.3"
+  },
+  "type": "module"
 }

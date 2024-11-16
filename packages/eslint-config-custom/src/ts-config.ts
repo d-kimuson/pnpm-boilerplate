@@ -1,26 +1,48 @@
 // @ts-check
 import { FlatConfig } from "@typescript-eslint/utils/ts-eslint"
 import tsEslint from "typescript-eslint"
+// @ts-expect-error -- 型定義が提供されていない
+import importPlugin from "eslint-plugin-import"
 
-export const tsConfig = (rootDir: string): FlatConfig.ConfigArray =>
+export const tsConfig = (
+  rootDir: string,
+  tsconfigFiles: ReadonlyArray<string> = ["tsconfig.json"]
+): FlatConfig.ConfigArray =>
   tsEslint.config(
+    // Config
     ...tsEslint.configs.strictTypeChecked,
     {
+      files: ["**/*.?(c|m)ts?(x)"],
+      plugins: {
+        import: importPlugin,
+      },
+      settings: {
+        /**
+         * @see https://github.com/import-js/eslint-plugin-import/issues/2556#issuecomment-1419518561
+         */
+        "import/parsers": {
+          "@typescript-eslint/parser": [".ts", ".tsx"],
+        },
+        "import/resolver": {
+          typescript: {
+            project: [...tsconfigFiles],
+            alwaysTryTypes: true,
+          },
+        },
+      },
       languageOptions: {
         parserOptions: {
-          project: [
-            "tsconfig.json",
-            "tsconfig.app.json",
-            "tsconfig.cli.json",
-            "tsconfig.test.json",
-          ],
+          project: [...tsconfigFiles],
           tsconfigRootDir: rootDir,
         },
       },
     },
+
+    // Rules
     {
       files: ["**/*.?(c|m)ts?(x)"],
       rules: {
+        "@typescript-eslint/no-unused-expressions": "off", // なんかこいついると動かないので off る
         "@typescript-eslint/no-floating-promises": [
           "error",
           { ignoreIIFE: true },

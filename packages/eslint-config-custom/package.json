@@ -2,35 +2,26 @@
   "name": "eslint-config-custom",
   "version": "0.0.0",
   "exports": {
-    "./js-config": {
-      "import": "./dist/js-config.js",
-      "require": "./dist/js-config.cjs",
-      "types": "./dist/js-config.d.ts"
-    },
-    "./ts-config": {
-      "import": "./dist/ts-config.js",
-      "require": "./dist/ts-config.cjs",
-      "types": "./dist/ts-config.d.ts"
-    }
+    "./js-config": "./src/js-config.ts",
+    "./ts-config": "./src/ts-config.ts"
   },
-  "type": "module",
   "scripts": {
-    "dev": "tsup --watch --clean=false",
-    "build": "tsup"
+    "typecheck": "tsc -p . --noEmit"
   },
   "devDependencies": {
-    "@eslint/js": "^9.7.0",
+    "@eslint/js": "^9.15.0",
     "@types/eslint__js": "^8.42.3",
-    "@typescript-eslint/eslint-plugin": "7.16.0",
-    "@typescript-eslint/parser": "^7.16.0",
-    "@typescript-eslint/utils": "^7.18.0",
-    "eslint": "9.7.0",
+    "@typescript-eslint/eslint-plugin": "8.14.0",
+    "@typescript-eslint/parser": "^8.14.0",
+    "@typescript-eslint/utils": "^8.14.0",
+    "eslint": "9.15.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-import-resolver-typescript": "3.6.1",
-    "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-unused-imports": "^4.0.0",
+    "eslint-import-resolver-typescript": "3.6.3",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "tsconfig": "workspace:*",
-    "tsup": "8.0.2",
-    "typescript-eslint": "^7.16.0"
-  }
+    "tsup": "8.3.5",
+    "typescript-eslint": "^8.14.0"
+  },
+  "type": "module"
 }

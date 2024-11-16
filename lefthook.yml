@@ -22,7 +22,7 @@ pre-commit:
       glob: "*.{ts,tsx,mts,mcs,js,jsx,mjs,cjs}"
       stage_fixed: true
       run: |
-        pnpm --filter backend exec eslint --no-error-on-unmatched-pattern --cache --fix {staged_files}
+        pnpm --filter backend eslint:run --fix {staged_files}
       skip:
         - merge
         - rebase
@@ -32,7 +32,7 @@ pre-commit:
       glob: "*.{ts,tsx,mts,mcs,js,jsx,mjs,cjs}"
       stage_fixed: true
       run: |
-        pnpm --filter frontend exec eslint --no-error-on-unmatched-pattern --cache --fix {staged_files}
+        pnpm --filter frontend eslint:run --fix {staged_files}
       skip:
         - merge
         - rebase
@@ -42,7 +42,7 @@ pre-commit:
       glob: "*.{ts,tsx,mts,mcs,js,jsx,mjs,cjs}"
       stage_fixed: true
       run: |
-        pnpm --filter helpers exec eslint --no-error-on-unmatched-pattern --cache --fix {staged_files}
+        pnpm --filter helpers eslint:run --fix {staged_files}
       skip:
         - merge
         - rebase

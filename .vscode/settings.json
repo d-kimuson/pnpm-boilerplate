@@ -18,7 +18,9 @@
       "pattern": "./apps/*/"
     }
   ],
-  "eslint.validate": ["typescript"],
+  "eslint.options": {
+    "flags": ["unstable_ts_config"]
+  },
   // prettier
   "prettier.configPath": ".prettierrc.mjs",
   // autofix

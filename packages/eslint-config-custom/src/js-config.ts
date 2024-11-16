@@ -8,37 +8,30 @@ import ununsedImports from "eslint-plugin-unused-imports"
 import { FlatConfig } from "@typescript-eslint/utils/ts-eslint"
 
 export const jsConfig: FlatConfig.ConfigArray = tsEslint.config(
-  {
-    files: ["**/*.ts"],
-    extends: [eslint.configs.recommended, ...tsEslint.configs.recommended],
-  },
+  // Shared Config
   {
     files: ["**/*.?(c|m)js?(x)", "**/*.?(c|m)ts?(x)"],
     plugins: {
-      import: importPlugin,
       "unused-imports": ununsedImports,
+      import: importPlugin,
     },
+    extends: [eslint.configs.recommended],
+  },
+
+  // JavaScript Only Config
+  {
+    files: ["**/*.?(c|m)js?(x)"],
     settings: {
       /**
        * @see https://github.com/import-js/eslint-plugin-import/issues/2556#issuecomment-1419518561
        */
       "import/parsers": {
-        "@typescript-eslint/parser": [".ts", ".tsx"],
         espree: [".js", ".cjs", ".mjs", ".jsx"],
-      },
-      "import/resolver": {
-        typescript: {
-          project: [
-            "tsconfig.json",
-            "tsconfig.app.json",
-            "tsconfig.cli.json",
-            "tsconfig.test.json",
-          ],
-          alwaysTryTypes: true,
-        },
       },
     },
   },
+
+  // Rules
   {
     files: ["**/*.?(c|m)js?(x)", "**/*.?(c|m)ts?(x)"],
     rules: {

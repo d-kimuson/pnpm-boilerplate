@@ -1,14 +1,16 @@
-// @ts-check
 import { jsConfig } from "eslint-config-custom/js-config"
 import { tsConfig } from "eslint-config-custom/ts-config"
+import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint"
 
-/** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigArray} */
-const eslintConfig = [
+const eslintConfig: FlatConfig.ConfigArray = [
   {
     ignores: ["**/*.?(c|m)js?(x)", "dist", "tsup.config.ts"],
   },
   ...jsConfig,
-  ...tsConfig(import.meta.dirname),
+  ...tsConfig(import.meta.dirname, [
+    "tsconfig.src.json",
+    "tsconfig.config.json",
+  ]),
   {
     files: ["**/*.test.ts"],
     rules: {

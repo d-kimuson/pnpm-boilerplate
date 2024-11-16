@@ -21,6 +21,7 @@
     "preinstall",
     "syncpack",
     "tada",
+    "tsbuildinfo",
     "TSES",
     "tsup",
     "typecheck",
