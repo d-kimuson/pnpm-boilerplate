@@ -1,3 +1,11 @@
+_anchors:
+  base-eslint-settings: &base-eslint-settings
+    glob: "*.{ts,tsx,mts,mcs,js,jsx,mjs,cjs}"
+    stage_fixed: true
+    skip:
+      - merge
+      - rebase
+
 pre-commit:
   parallel: true
   commands:
@@ -18,31 +26,19 @@ pre-commit:
         - rebase
 
     backend-eslint:
+      <<: *base-eslint-settings
       root: "apps/backend/"
-      glob: "*.{ts,tsx,mts,mcs,js,jsx,mjs,cjs}"
-      stage_fixed: true
       run: |
         pnpm --filter backend eslint:run --fix {staged_files}
-      skip:
-        - merge
-        - rebase
 
     frontend-eslint:
+      <<: *base-eslint-settings
       root: "apps/frontend/"
-      glob: "*.{ts,tsx,mts,mcs,js,jsx,mjs,cjs}"
-      stage_fixed: true
       run: |
         pnpm --filter frontend eslint:run --fix {staged_files}
-      skip:
-        - merge
-        - rebase
 
     helpers-eslint:
+      <<: *base-eslint-settings
       root: "packages/helpers/"
-      glob: "*.{ts,tsx,mts,mcs,js,jsx,mjs,cjs}"
-      stage_fixed: true
       run: |
         pnpm --filter helpers eslint:run --fix {staged_files}
-      skip:
-        - merge
-        - rebase
