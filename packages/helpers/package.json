@@ -28,7 +28,7 @@
   "devDependencies": {
     "@types/node": "22.9.0",
     "@typescript-eslint/eslint-plugin": "8.14.0",
-    "@typescript-eslint/utils": "^8.14.0",
+    "@typescript-eslint/utils": "8.14.0",
     "eslint": "9.15.0",
     "eslint-config": "workspace:*",
     "tsconfig": "workspace:*",
