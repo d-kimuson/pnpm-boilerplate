@@ -26,7 +26,7 @@
     "@octokit/rest": "21.0.2",
     "cspell": "8.16.0",
     "lefthook": "1.8.2",
-    "prettier": "3.3.3",
+    "prettier": "3.4.2",
     "syncpack": "13.0.0",
     "turbo": "^2.2.3"
   },
