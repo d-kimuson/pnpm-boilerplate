@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "tsconfig/config.json",
+  "extends": "@pnpm-boilerplate/tsconfig/config.json",
   "compilerOptions": {
     "noEmit": true
   },

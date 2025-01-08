@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config",
+  "name": "@pnpm-boilerplate/eslint-config",
   "version": "0.0.0",
   "type": "module",
   "exports": {
@@ -20,7 +20,7 @@
     "eslint-import-resolver-typescript": "3.6.3",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-unused-imports": "^4.1.4",
-    "tsconfig": "workspace:*",
+    "@pnpm-boilerplate/tsconfig": "workspace:*",
     "tsup": "8.3.5",
     "typescript-eslint": "^8.14.0"
   }

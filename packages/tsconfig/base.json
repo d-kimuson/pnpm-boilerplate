@@ -18,6 +18,7 @@
 
     // module 解決オプション
     "module": "ESNext",
-    "moduleResolution": "Bundler"
+    "moduleResolution": "Bundler",
+    "customConditions": ["@pnpm-boilerplate/src"]
   }
 }

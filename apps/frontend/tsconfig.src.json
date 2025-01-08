@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "tsconfig/react.json",
+  "extends": "@pnpm-boilerplate/tsconfig/react.json",
   "compilerOptions": {},
   "include": ["src"],
   "exclude": ["node_modules"]

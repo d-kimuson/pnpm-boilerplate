@@ -1,4 +1,4 @@
-import { typedRange } from "helpers"
+import { typedRange } from "@pnpm-boilerplate/helpers"
 import { dep } from "./dep"
 
 // eslint-disable-next-line @typescript-eslint/require-await

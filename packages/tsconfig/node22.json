@@ -4,6 +4,6 @@
   "compilerOptions": {
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "customConditions": ["<project-name>/src"]
+    "customConditions": ["@pnpm-boilerplate/src"]
   }
 }
