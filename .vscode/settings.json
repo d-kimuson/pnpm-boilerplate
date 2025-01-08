@@ -22,7 +22,7 @@
     "flags": ["unstable_ts_config"]
   },
   // prettier
-  "prettier.configPath": ".prettierrc.mjs",
+  "prettier.configPath": ".prettierrc.js",
   // autofix
   "editor.formatOnSave": false,
   "[typescript][javascript][typescriptreact][javascriptreact][jsonc][json][markdown][mdx][yaml]": {
