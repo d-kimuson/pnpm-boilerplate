@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "pnpm ts:run ./src/index.ts",
-    "lint": "pnpm eslint:run .",
+    "lint": "pnpm run:eslint .",
     "fix": "pnpm lint --fix",
     "build": "esbuild ./src/index.ts --format=esm --platform=node --bundle --packages=external --outdir=out",
     "typecheck": "tsc -p ./tsconfig.json --noEmit",
     "ts:run": "tsx --tsconfig ./tsconfig.src.json -C '<project-name>/src'",
-    "eslint:run": "eslint --cache --no-error-on-unmatched-pattern --flag unstable_ts_config"
+    "run:eslint": "eslint --cache --no-error-on-unmatched-pattern --flag unstable_ts_config"
   },
   "dependencies": {
     "helpers": "workspace:*"

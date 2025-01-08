@@ -29,16 +29,16 @@ pre-commit:
       <<: *base-eslint-settings
       root: "apps/backend/"
       run: |
-        pnpm --filter backend eslint:run --fix {staged_files}
+        pnpm --filter backend run:eslint --fix {staged_files}
 
     frontend-eslint:
       <<: *base-eslint-settings
       root: "apps/frontend/"
       run: |
-        pnpm --filter frontend eslint:run --fix {staged_files}
+        pnpm --filter frontend run:eslint --fix {staged_files}
 
     helpers-eslint:
       <<: *base-eslint-settings
       root: "packages/helpers/"
       run: |
-        pnpm --filter helpers eslint:run --fix {staged_files}
+        pnpm --filter helpers run:eslint --fix {staged_files}

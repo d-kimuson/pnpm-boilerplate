@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "lint": "pnpm eslint:run .",
+    "lint": "pnpm run:eslint .",
     "fix": "pnpm lint --fix",
     "typecheck": "tsc -p ./tsconfig.json --noEmit",
-    "eslint:run": "eslint --cache --no-error-on-unmatched-pattern --flag unstable_ts_config"
+    "run:eslint": "eslint --cache --no-error-on-unmatched-pattern --flag unstable_ts_config"
   },
   "devDependencies": {
     "@types/node": "22.9.0",
