@@ -16,15 +16,15 @@
     "@pnpm-boilerplate/helpers": "workspace:*"
   },
   "devDependencies": {
-    "@types/node": "22.9.0",
-    "@typescript-eslint/eslint-plugin": "8.14.0",
-    "@typescript-eslint/utils": "^8.14.0",
-    "better-typescript-lib": "2.10.0",
-    "esbuild": "^0.24.0",
-    "eslint": "9.15.0",
     "@pnpm-boilerplate/eslint-config": "workspace:*",
     "@pnpm-boilerplate/tsconfig": "workspace:*",
-    "tsx": "^4.19.2",
+    "@types/node": "22.9.0",
+    "@typescript-eslint/eslint-plugin": "8.14.0",
+    "@typescript-eslint/utils": "8.14.0",
+    "better-typescript-lib": "2.10.0",
+    "esbuild": "0.24.0",
+    "eslint": "9.15.0",
+    "tsx": "4.19.2",
     "typescript": "5.6.3"
   }
 }
