@@ -7,16 +7,16 @@
     "lint": "pnpm run:eslint .",
     "fix": "pnpm lint --fix",
     "typecheck": "tsc -p ./tsconfig.json --noEmit",
-    "run:eslint": "eslint --cache --no-error-on-unmatched-pattern --flag unstable_ts_config"
+    "run:eslint": "eslint --cache --no-error-on-unmatched-pattern"
   },
   "devDependencies": {
-    "@types/node": "22.9.0",
-    "@typescript-eslint/eslint-plugin": "8.14.0",
-    "@typescript-eslint/utils": "^8.14.0",
-    "better-typescript-lib": "2.9.0",
-    "eslint": "9.15.0",
     "@pnpm-boilerplate/eslint-config": "workspace:*",
     "@pnpm-boilerplate/tsconfig": "workspace:*",
-    "typescript": "5.6.3"
+    "@types/node": "22.13.1",
+    "@typescript-eslint/eslint-plugin": "8.23.0",
+    "@typescript-eslint/utils": "^8.23.0",
+    "better-typescript-lib": "2.10.1",
+    "eslint": "9.20.0",
+    "typescript": "5.7.3"
   }
 }

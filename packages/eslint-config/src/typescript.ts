@@ -1,19 +1,30 @@
-// @ts-check
-import { FlatConfig } from "@typescript-eslint/utils/ts-eslint"
+import eslint from "@eslint/js"
 import tsEslint from "typescript-eslint"
+import ununsedImports from "eslint-plugin-unused-imports"
 // @ts-expect-error -- 型定義が提供されていない
 import importPlugin from "eslint-plugin-import"
 
-export const tsConfig = (
-  rootDir: string,
-  tsconfigFiles: ReadonlyArray<string> = ["tsconfig.json"]
-): FlatConfig.ConfigArray =>
-  tsEslint.config(
-    // Config
-    ...tsEslint.configs.strictTypeChecked,
+export const typescript = (
+  dirname: string,
+  options?: Partial<{
+    tsconfigPaths: string[]
+  }>
+) => {
+  const tsconfigPaths = options?.tsconfigPaths ?? ["./tsconfig.json"]
+
+  return tsEslint.config(
+    eslint.configs.recommended,
+    tsEslint.configs.recommendedTypeChecked,
+    tsEslint.configs.stylisticTypeChecked,
     {
-      files: ["**/*.?(c|m)ts?(x)"],
+      languageOptions: {
+        parserOptions: {
+          project: tsconfigPaths,
+          tsconfigRootDir: dirname,
+        },
+      },
       plugins: {
+        "unused-imports": ununsedImports,
         import: importPlugin,
       },
       settings: {
@@ -22,32 +33,46 @@ export const tsConfig = (
          */
         "import/parsers": {
           "@typescript-eslint/parser": [".ts", ".tsx"],
+          espree: [".js", ".cjs", ".mjs", ".jsx"],
         },
         "import/resolver": {
           typescript: {
-            project: [...tsconfigFiles],
+            project: [...tsconfigPaths],
             alwaysTryTypes: true,
           },
         },
       },
-      languageOptions: {
-        parserOptions: {
-          project: [...tsconfigFiles],
-          tsconfigRootDir: rootDir,
-        },
-      },
     },
-
-    // Rules
     {
-      files: ["**/*.?(c|m)ts?(x)"],
       rules: {
-        "@typescript-eslint/no-unused-expressions": "off", // なんかこいついると動かないので off る
-        "@typescript-eslint/no-floating-promises": [
+        "import/order": [
           "error",
-          { ignoreIIFE: true },
+          {
+            groups: [
+              "builtin",
+              "external",
+              "type",
+              "internal",
+              "parent",
+              "index",
+              "sibling",
+              "object",
+              "unknown",
+            ],
+            pathGroups: [
+              {
+                pattern: "~/**",
+                group: "internal",
+                position: "before",
+              },
+            ],
+            alphabetize: {
+              order: "asc",
+            },
+            "newlines-between": "never",
+          },
         ],
-        "@typescript-eslint/no-misused-promises": "error",
+        // dup ってたらいらない
         "@typescript-eslint/consistent-type-imports": "error",
         "@typescript-eslint/consistent-type-assertions": [
           "error",
@@ -75,13 +100,10 @@ export const tsConfig = (
         ],
         "@typescript-eslint/prefer-ts-expect-error": "error",
         "@typescript-eslint/no-non-null-assertion": "error",
-        "@typescript-eslint/prefer-nullish-coalescing": "error",
         "@typescript-eslint/no-explicit-any": ["error"],
         "@typescript-eslint/consistent-type-definitions": ["error", "type"],
         "@typescript-eslint/method-signature-style": ["error", "property"],
-        "@typescript-eslint/prefer-for-of": "error",
-        "@typescript-eslint/no-unnecessary-condition": "error",
-        "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
       },
     }
   )
+}

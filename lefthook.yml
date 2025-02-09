@@ -36,9 +36,3 @@ pre-commit:
       root: "apps/frontend/"
       run: |
         pnpm --filter frontend run:eslint --fix {staged_files}
-
-    helpers-eslint:
-      <<: *base-eslint-settings
-      root: "packages/helpers/"
-      run: |
-        pnpm --filter helpers run:eslint --fix {staged_files}

@@ -1,16 +1,17 @@
-import { jsConfig } from "@pnpm-boilerplate/eslint-config/js-config"
-import { tsConfig } from "@pnpm-boilerplate/eslint-config/ts-config"
+import { typescript } from "@pnpm-boilerplate/eslint-config/typescript"
 import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint"
 
 const eslintConfig: FlatConfig.ConfigArray = [
   {
-    ignores: ["**/*.?(c|m)js?(x)"],
+    ignores: ["out"],
   },
-  ...jsConfig,
-  ...tsConfig(import.meta.dirname, [
-    "tsconfig.src.json",
-    "tsconfig.config.json",
-  ]),
+  ...typescript(import.meta.dirname, {
+    tsconfigPaths: [
+      "./tsconfig.src.json",
+      "./tsconfig.config.json",
+      "./tsconfig.json",
+    ],
+  }),
 ]
 
 export default eslintConfig

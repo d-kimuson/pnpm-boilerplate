@@ -10,21 +10,18 @@
     "build": "esbuild ./src/index.ts --format=esm --platform=node --bundle --packages=external --outdir=out",
     "typecheck": "tsc -p ./tsconfig.json --noEmit",
     "ts:run": "tsx --tsconfig ./tsconfig.src.json -C '@pnpm-boilerplate/src'",
-    "run:eslint": "eslint --cache --no-error-on-unmatched-pattern --flag unstable_ts_config"
-  },
-  "dependencies": {
-    "@pnpm-boilerplate/helpers": "workspace:*"
+    "run:eslint": "eslint --cache --no-error-on-unmatched-pattern"
   },
   "devDependencies": {
-    "@types/node": "22.9.0",
-    "@typescript-eslint/eslint-plugin": "8.14.0",
-    "@typescript-eslint/utils": "^8.14.0",
-    "better-typescript-lib": "2.9.0",
-    "esbuild": "^0.24.0",
-    "eslint": "9.15.0",
     "@pnpm-boilerplate/eslint-config": "workspace:*",
     "@pnpm-boilerplate/tsconfig": "workspace:*",
+    "@types/node": "22.13.1",
+    "@typescript-eslint/eslint-plugin": "8.23.0",
+    "@typescript-eslint/utils": "^8.23.0",
+    "better-typescript-lib": "2.10.1",
+    "esbuild": "^0.25.0",
+    "eslint": "9.20.0",
     "tsx": "^4.19.2",
-    "typescript": "5.6.3"
+    "typescript": "5.7.3"
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "@pnpm-boilerplate/tsconfig/config.json",
   "compilerOptions": {
-    "composite": true
+    "composite": false
   },
   "include": ["eslint.config.ts"]
 }
