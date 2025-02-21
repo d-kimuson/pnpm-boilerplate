@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "@pnpm-boilerplate/frontend",
   "description": "frontend のサンプルアプリです。",
   "version": "1.0.0",
   "type": "module",
