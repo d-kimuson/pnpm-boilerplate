@@ -10,21 +10,21 @@
     "typecheck": "tsc -p . --noEmit"
   },
   "devDependencies": {
-    "@eslint/js": "^9.20.0",
+    "@eslint/js": "9.20.0",
     "@pnpm-boilerplate/tsconfig": "workspace:*",
     "@tsconfig/strictest": "2.0.2",
-    "@types/eslint__js": "^8.42.3",
-    "@typescript-eslint/eslint-plugin": "8.14.0",
-    "@typescript-eslint/parser": "^8.14.0",
-    "@typescript-eslint/utils": "^8.14.0",
-    "eslint": "9.15.0",
-    "eslint-config-prettier": "^9.1.0",
+    "@types/eslint__js": "8.42.3",
+    "@typescript-eslint/eslint-plugin": "8.23.0",
+    "@typescript-eslint/parser": "8.14.0",
+    "@typescript-eslint/utils": "8.23.0",
+    "eslint": "9.20.0",
+    "eslint-config-prettier": "9.1.0",
     "eslint-import-resolver-typescript": "3.6.3",
     "eslint-plugin-import": "2.31.0",
-    "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-unused-imports": "^4.1.4",
-    "globals": "^15.14.0",
-    "typescript": "5.6.3",
-    "typescript-eslint": "^8.23.0"
+    "eslint-plugin-react": "7.37.4",
+    "eslint-plugin-unused-imports": "4.1.4",
+    "globals": "15.14.0",
+    "typescript": "5.7.3",
+    "typescript-eslint": "8.23.0"
   }
 }
